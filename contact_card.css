@@ -1,0 +1,27 @@
+#form{display: inline-block;
+
+}
+
+form{width: 500px;
+  height: auto;
+  text-align: right;
+}
+
+input{
+  margin-top: 10px;
+}
+
+#contact_card{
+  /*display: inline-block;*/
+  width: 300px;
+  height: auto;
+  margin-left: 200px;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.cardsubmit{width: 200px;
+            /*height: 150px;*/
+            border: 3px soild black;
+
+}

@@ -1,0 +1,52 @@
+<!DOCtype HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Contact Card</title>
+  <link rel="stylesheet" type="text/css" href="contact_card.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+
+
+	  $('form').submit(function() {
+
+	    $('#contact_card').append("<div class='cardsubmit'><h4>" + $('#first_name').val() + " " + $('#last_name').val() + "</h4><p>Click for more details</p><p hidden>"+$('#description').val()+"</p></div>");
+
+	    return false;
+
+
+	  });
+
+	  $(document).on('click', '.cardsubmit', function() {
+
+	    $(this).children('p').toggle('slow');
+	  });
+
+	});
+  	</script>
+
+</head>
+<body>
+	<div>
+  <div id="form">
+				<form>
+						<label>First Name:</label>
+						<input id="first_name" type="text" placeholder="first_name" name="first_name"><br>
+						<label>Last Name:</label>
+						<input id="last_name" type="text" placeholder="last_name" name="last_name"><br><br>
+						<label>Description:</label>
+						<textarea id="description" name="description"></textarea><br>
+						<input id="submit" type="submit" value="Add User">
+						<br>
+						<br>
+			</form>
+  </div>
+	<div>
+		<div id="contact_card">
+				<p class="cardsubmit">Contact Card</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>
